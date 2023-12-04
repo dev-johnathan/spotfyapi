@@ -1,0 +1,30 @@
+{
+  "name": "spofyteam",
+  "version": "1.0.0",
+  "description": "Aplicativo para visualizar informações do Spotify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2023-IFSP-IFGOIANO/sprint-2-pb-aws-ifsp-ifgoiano.git"
+  },
+  "keywords": [
+    "spotify",
+    "node",
+    "js"
+  ],
+  "author": "equipe-3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2023-IFSP-IFGOIANO/sprint-2-pb-aws-ifsp-ifgoiano/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2023-IFSP-IFGOIANO/sprint-2-pb-aws-ifsp-ifgoiano#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
