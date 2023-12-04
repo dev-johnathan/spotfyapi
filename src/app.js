@@ -1,5 +1,5 @@
-const express = require('express');
-const app = express();
+const express    = require('express');
+const app        = express();
 const bodyParser = require('body-parser');
 
 const PORT = 3000;
@@ -13,5 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Rotas
 app.get('/', (req, res) => {
-    res.send('Seja bem vindo ao Spofy Team!');
+    res.send('Seja bem vindo ao Spofy-Team!');
 });
+
+
+//Auth routes
+app.use('/spofyteam', require('./routes/routes'))

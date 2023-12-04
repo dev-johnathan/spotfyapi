@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/Compass-pb-aws-2023-IFSP-IFGOIANO/sprint-2-pb-aws-ifsp-ifgoiano#readme",
   "dependencies": {
+    "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.0.2"
   }
 }
