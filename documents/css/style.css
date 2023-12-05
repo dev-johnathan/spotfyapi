@@ -97,34 +97,88 @@ body{
 
 }
 
-.menu .bars button{
-    background-color: transparent;
-    border: none;
-    display: none;
+
+.content .frames .frame:hover{
+    fill: white;
+    transform: scale(1.1);
     
 }
 
-.menu .bars svg{
-    fill: white;
-    cursor: pointer;
-}
-
-.menu .bars svg:hover{
-    fill: white;
-    transform: scale(1.2);
-    transform: translateX(-100%);
+.content .frames .frame:hover .frame img{
+    background-color: #0000009d;
 }
 
 .content{
     background: linear-gradient(#27b027 20%, #000000 90%);
     width: calc(100% - 20px);
-    height: calc(100vh - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
     margin: 10px 10px;
     border-radius: 10px;
+    padding: 50px;
   
+}
+
+.content h1{
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.content .frames{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content .frames .frame{
+    position: relative;
+    background-color: #000000dc;
+    width: 200px;
+    height: 250px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 10px;
+    
+   
+}
+
+
+.content .frames .frame img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    
+}
+
+.content .frames .frame button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content .frames .frame:hover button {
+    opacity: 1; 
+}
+
+.content .frames .frame button img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.content .frames .frame p{
+    max-width: 230px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 @media screen and (max-width:901px) {
@@ -134,7 +188,7 @@ body{
     }
     .menu{
         width: 150px;
-        height:calc(100vh - 20px);
+        height:100vh;
         left: 0;
         display: block;
         margin: 10px 10px;
@@ -172,6 +226,20 @@ body{
     .menu .search{
        width: 120px;
        margin-top: 5px;
+    }
+
+    .container{
+        width: 100%;
+        
+    }
+
+    .content .frames{
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content .frames .frame{
+        margin: 20px 10px;
     }
 }
 
