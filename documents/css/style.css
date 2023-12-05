@@ -63,7 +63,7 @@ body{
     margin-right: 20px;
 }
 
-.menu .genres li button{
+.menu .genres li .button{
     background-color: rgb(31, 30, 30);
     color: white;
     border:none;
@@ -74,7 +74,12 @@ body{
     
 }
 
-.menu .genres li button:hover{
+.menu .genres li .button.active{
+    background-color: #fff!important;
+    color:#000;
+}
+
+.menu .genres li .button:hover{
     background-color: #fff;
     color: #000;
 }
