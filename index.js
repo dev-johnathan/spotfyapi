@@ -57,3 +57,13 @@ fetch('https://accounts.spotify.com/api/token', {
 .catch(err => {
     console.log(err, 'error! Cant acess the data.');
 });
+function selectGenre(genre) {
+                
+    const clickedButton = document.getElementById(genre);
+    
+    document.querySelectorAll('.button').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    clickedButton.classList.add('active');
+}
