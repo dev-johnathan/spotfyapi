@@ -160,9 +160,12 @@ body{
 .content .frames .frame button{
     background-color: transparent;
     border: none;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 75%;
     transform: translate(-50%, -50%);
     opacity: 0; 
     transition: opacity 0.3s ease-in-out;
@@ -170,11 +173,13 @@ body{
 
 .content .frames .frame:hover button {
     opacity: 1; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.852);
 }
 
+
 .content .frames .frame button img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     
 }
 
