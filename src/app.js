@@ -1,6 +1,9 @@
 const express    = require('express');
 const app        = express();
 const bodyParser = require('body-parser');
+const cors       = require('cors')
+
+app.use(cors());
 
 const PORT = 3000;
 
@@ -17,5 +20,5 @@ app.get('/', (req, res) => {
 });
 
 
-//Auth routes
+//Rotas
 app.use('/spofyteam', require('./routes/routes'))
