@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 });
 
 
-//Auth routes
+//Rotas
 app.use('/spofyteam', require('./routes/routes'))
