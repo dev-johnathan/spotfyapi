@@ -54,9 +54,10 @@ router.post('/musicasbygenre/:genre', async (req, res) => {
         if (response.status === 200) {
         //Obtenho o id da playlist mais popular (primeiro retorno)
         const playlistId = response.data.playlists.items[0].id;
+        
 
         //Busco as 10 primeiras músicas da playlist
-        const tracksResponse = await axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=10`, {
+        const tracksResponse = await axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=12`, {
             headers: {
                 'Authorization': `Bearer ${spotifyToken}`
             }
@@ -74,51 +75,6 @@ router.post('/musicasbygenre/:genre', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).send('Erro ao buscar músicas por gênero!');
-    }
-});
-
-
-
-//buscando os artistas por gênero
-router.get('/', async (req, res) => {
-    try {
-        const genre = req.params.genre; //obtém o parâmetro gênero da URL
-        console.log(genre); //debug
-
-        if (!genre) {
-            return res.status(400).json({ error: 'Um gênereo musical deve ser informado!' });
-        }
-
-        // Primeiro obtenho as informações do gênero escolhido
-        const response = await axios.get(`https://api.spotify.com/v1/search?q=${genre}&type=genre&limit=1`, {
-            headers: {
-                'Authorization': `Bearer ${spotifyToken}`
-            }
-        });
-        
-        if (response.status === 200) {
-        //Obtenho o id do gênero (primeiro retorno)
-        const genreId = response.data.genres.items[0].id;
-
-        //Busco as informações dos artistas mais ouvidos do gênero
-        const artistsResponse = await axios.get(`https://api.spotify.com/v1/browse/categories/${genreId}/playlists?limit=1`, {
-            headers: {
-                'Authorization': `Bearer ${spotifyToken}`
-            }
-        });
-        
-        res.json(artistsResponse.data); //retorno dos dados no formato JSON
-        const firstItem = artistsResponse.data.items[1].track; //debug        
-        console.log(`Primeiro artista: ${firstItem.name} - ${firstItem.album.artists[0].name} - ${firstItem.duration_ms}s `); //debug
-
-        } else {
-            return res.status(404).send({ error: 'Nenhum gênero encontrado para o termo especificado!' });
-        }
-
-
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Erro ao buscar artistas por gênero!');
     }
 });
 
