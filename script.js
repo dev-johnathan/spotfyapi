@@ -1,5 +1,5 @@
 let option = 'Artistas';
-let selectedGenre = ''
+let selectedGenre = '';
 
 function getTracks(event)  {
     option = event.target.value;
