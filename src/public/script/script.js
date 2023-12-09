@@ -57,13 +57,25 @@ async function selectGenre(genre){
             //listImages.push(trackImage.src);
         });
 
+        let frame = ('')
+           
         for(let i=0; i<listNames.length; i++){
-            let frame = `<div class="frame">
+
+                        if (option=='Artistas'){
+                           frame = `<div class="frame">
                             <img src="images/photoMusic.jpg" alt="">
                             <button><img src="images/botao-play (1).png" alt=""></button>
                             <p id="MPName">${listNames[i]}</p>
-                            <p id="iFrame">${trackPlayer[i]}</p>
                         </div>`;
+
+                        } 
+                        
+                        if (option=='Musicas') {
+                            frame = `<div >
+                            
+                            <p id="iFrame">${listNames[i]}</p>
+                        </div>`;
+                        }
 
             let novaDiv = document.createElement('div');
             novaDiv.innerHTML = frame;

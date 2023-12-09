@@ -57,7 +57,7 @@ router.post('/musicasbygenre/:genre', async (req, res) => {
         
 
         //Busco as 10 primeiras músicas da playlist
-        const tracksResponse = await axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=12`, {
+        const tracksResponse = await axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=20`, {
             headers: {
                 'Authorization': `Bearer ${spotifyToken}`
             }
