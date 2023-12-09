@@ -265,3 +265,46 @@ h4{
 }
 
 
+
+iframe {
+    /* Remove a borda */
+    border: none;
+  
+    /* Arredonda os cantos */
+    border-radius: 10px;
+  
+    /* Remove a barra de rolagem */
+    overflow: hidden;
+  
+    /* Adiciona sombra para dar profundidade */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+    /* Transição suave para hover */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Aumenta um pouco o tamanho e a sombra no hover */
+  iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .frame {
+    /* ... Seus estilos existentes ... */
+
+    /* Adiciona estilos para centralizar o conteúdo dentro da div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Adiciona estilos para o elemento <p> dentro da .frame */
+.frame p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin-top: 0px; /* Adiciona espaçamento superior */
+}
