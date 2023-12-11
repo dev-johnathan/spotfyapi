@@ -10,10 +10,8 @@ function getTracks(event)  {
 // Função assíncrona para selecionar o gênero
 async function selectGenre(genre){    
     selectedGenre = genre; // Atualiza o gênero selecionado
-    const genreLabel = document.getElementById('genreLabel'); // Obtém o elemento do rótulo do gênero
-    genreLabel.innerText = selectedGenre; // Atualiza o texto do rótulo do gênero
+    const title=document.getElementById('title'); //Obtém o title da página selecionada
     console.log(selectedGenre); // Registra o gênero selecionado
-
     const div = document.getElementById('frames'); // Obtém o elemento div
     while (div.firstChild) { // Enquanto houver um primeiro filho na div
         div.removeChild(div.firstChild); // Remove o primeiro filho
@@ -36,6 +34,7 @@ async function selectGenre(genre){
             let trackName = document.createElement('p');
             let trackImage = document.createElement('img');
             if(option == 'Musicas') {
+                title.innerHTML='As músicas mais tocadas do gênero '+selectedGenre + ' ♪♫♪';
                 // Cria um novo elemento 'iframe' para o player da música
                 let trackPlayer = document.createElement('iframe');
                 trackPlayer.src = 'https://open.spotify.com/embed/track/' + item.track.id;
@@ -49,6 +48,7 @@ async function selectGenre(genre){
                 document.getElementById('frames').appendChild(trackPlayer);
             }
             if(option == 'Artistas') {
+                title.innerHTML='Os artistas em destaque do gênero '+selectedGenre + ' ♪♫♪';
                 trackName.textContent = item.track.album.artists[0].name;
                 //trackImage.src=item.track.album.artists[0].images[0].url;
             }
@@ -63,18 +63,17 @@ async function selectGenre(genre){
 
                         if (option=='Artistas'){
                            frame = `<div class="frame">
-                            <img src="images/photoMusic.jpg" alt="">
-                            <button><img src="images/botao-play (1).png" alt=""></button>
-                            <p id="MPName">${listNames[i]}</p>
-                        </div>`;
+                                        <img src="images/photoMusic.jpg" alt="">
+                                        <button><img src="images/botao-play (1).png" alt=""></button>
+                                        <p id="MPName">${listNames[i]}</p>
+                                    </div>`;
 
                         } 
                         
                         if (option=='Musicas') {
-                            frame = `<div >
-                            
-                            <p id="iFrame">${listNames[i]}</p>
-                        </div>`;
+                            frame = `<div class="iframe">
+                                        <p id="iFrame">${listNames[i]}</p>
+                                    </div>`;
                         }
 
             let novaDiv = document.createElement('div');
