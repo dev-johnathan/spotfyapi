@@ -44,6 +44,7 @@ npm run dev
 
 ![image](https://github.com/Compass-pb-aws-2023-IFSP-IFGOIANO/sprint-2-pb-aws-ifsp-ifgoiano/assets/124719932/536a80ab-5832-49ad-8361-0caf7aafafe8)
 
-
+## Licença de Uso
+- Livre para replicação, reprodução e melhorias.
 ## 👨‍💻 Desenvolvedores
 Ana Giampiedro | Caua Olivio | Johnathan Borba | Roberto Molina
