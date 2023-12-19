@@ -4,8 +4,8 @@ const axios   = require('axios');
 let spotifyToken = '';
 
 //Credenciais da conta Spotify
-const client_id = '5443c46945a54b0b8fe84e8dc2ca5e5a';
-const client_secret = 'e3cf60d3f6594ce5aec1c2303c88386c';
+const client_id = '//insira seu id aqui// ';
+const client_secret = '//insira sua senha//';
 const encodedData = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
 
 //Função para gerar o token de autenticação no Spotify
